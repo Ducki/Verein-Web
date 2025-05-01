@@ -4,13 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sprötau Begeistert e.V.</title>
-    <link rel="stylesheet" href="out.css"/>
-</head>
-<body class="bg-gray-50 min-h-screen flex items-center justify-center p-4">
-<div class="max-w-2xl mx-auto text-center">
+    <style>
+        :root {
+            color-scheme: light dark;
 
-    <div class="mb-8 flex justify-center">
-        <svg width="80" viewBox="0 0 372 359" version="1.1" xmlns="http://www.w3.org/2000/svg"
+            --page-dark-bg: #32302d;
+            --page-light-bg: #dfdbd6;
+
+            --text-light-color: #3c3838;
+            --text-dark-color: #d8d2c8;
+
+        }
+
+        html, body {
+            margin: 0;
+        }
+
+        body {
+            box-sizing: border-box;
+            font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.55;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            justify-items: center;
+            height: 100vh;
+            background: light-dark(var(--page-light-bg), var(--page-dark-bg));
+            color: light-dark(var(--text-light-color), var(--text-dark-color));
+            padding: 1.5rem;
+        }
+
+        .teaser-text {
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        .box {
+            max-width: 38rem;
+        }
+
+        .logo-wrapper {
+            text-align: center;
+        }
+
+        .logo-svg {
+            fill: light-dark(var(--text-light-color), var(--text-dark-color));
+        }
+    </style>
+</head>
+<body>
+<div>
+
+    <div class="logo-wrapper">
+        <svg class="logo-svg" width="80" viewBox="0 0 372 359" version="1.1" xmlns="http://www.w3.org/2000/svg"
              xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/"
              style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
             <rect id="ArtBoard1" x="0" y="0" width="371.682" height="358.753" style="fill:none;"/>
@@ -20,14 +66,14 @@
         </svg>
     </div>
 
-    <article class="p-5 text-lg font-bold leading-relaxed text-left text-gray-700">
-        <p class="mb-4">
+    <article class="box">
+        <p class="teaser-text">
             Wir sind eine bunte Gemeinschaft aus Sprötau, die das Dorfleben mit Leidenschaft gestaltet.
             Mit Veranstaltungen für alle Generationen, kreativen Ideen und gelebter Tradition
-            bringen wir Menschen zusammen – egal ob jung oder alt, alteingesessen oder neu dazugekommen
+            bringen wir Menschen zusammen – egal ob jung oder alt, alteingesessen oder neu dazugekommen.
         </p>
 
-        <p class="font-normal">Sprötau Begeistert e.V. – Dein Heimat- und Kulturverein.</p>
+        <p class="font-normal">Sprötau Begeistert e.V. – <em>Dein Heimat- und Kulturverein.</em></p>
     </article>
 </div>
 </body>
