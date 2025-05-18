@@ -18,6 +18,12 @@
             --text-light-color: #3c3838;
             --text-dark-color: #d8d2c8;
 
+            --link-light-hover: #0245e3;
+            --link-dark-hover: #6ab0ff;
+
+            --link-light-color: #0b386a;
+            --link-dark-color: #9ec2e6;
+
         }
 
         html, body {
@@ -38,6 +44,16 @@
             padding: 1.5rem;
         }
 
+        @media (prefers-color-scheme: dark) {
+            body {
+                letter-spacing: 0.01rem;
+            }
+
+            a:link, a:visited {
+                font-weight: 500;
+            }
+        }
+
         .teaser-text {
             font-weight: bold;
             font-size: 1.1rem;
@@ -54,10 +70,51 @@
         .logo-svg {
             fill: light-dark(var(--text-light-color), var(--text-dark-color));
         }
+
+        a:link, a:visited {
+            color: light-dark(var(--link-light-color), var(--link-dark-color));
+        }
+
+        a:hover {
+            color: light-dark(var(--link-light-hover), var(--link-dark-hover));
+            text-decoration-style: dotted;
+
+            text-decoration-color: #dfac3b;
+        }
+
+        a:active {
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            background: light-dark(var(--page-light-bg), var(--page-dark-bg));
+            padding: 1rem 0 0.5rem 0;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 1.05rem;
+            transition: color 0.2s;
+        }
+
+        .navbar a:hover {
+            text-decoration: underline;
+        }
     </style>
 </head>
 <body>
 <div>
+    <nav class="navbar">
+        <a href="#">Start</a>
+        <a href="#">Über uns</a>
+        <a href="#">Veranstaltungen</a>
+        <a href="#">Kontakt</a>
+    </nav>
 
     <div class="logo-wrapper">
         <svg class="logo-svg" width="80" viewBox="0 0 372 359" version="1.1" xmlns="http://www.w3.org/2000/svg"
@@ -77,7 +134,8 @@
             bringen wir Menschen zusammen – egal ob jung oder alt, alteingesessen oder neu dazugekommen.
         </p>
 
-        <p class="font-normal">Sprötau Begeistert e.V. – <em>Dein Heimat- und Kulturverein.</em></p>
+        <p class="font-normal">Sprötau <a href="">Begeistert</a> e.V. – <em>Dein Heimat- und Kulturverein.</em></p>
+        <p><a href="">Testg</a></p>
     </article>
 </div>
 </body>
