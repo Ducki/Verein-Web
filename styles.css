@@ -5,8 +5,14 @@
 :root {
     color-scheme: light dark;
 
+    --font-serif: Georgia, "Times New Roman", Times, serif;
+
+    --accent-terra: #0d82b5;
+    --accent-terra-dark: #3a8017;
+
     --accent-orange: #ff7a54;
     --accent-pink: #e84a8a;
+    --accent-forest: #2d5a47;
     --accent-cyan: #2dd4bf;
     --accent-blue: #3b82f6;
     --accent-purple: #a855f7;
@@ -63,35 +69,39 @@ body {
     margin: 0 auto;
 }
 
-.navbar a {
-    text-decoration: none;
-    font-size: 0.95rem;
-    font-weight: 500;
-    color: light-dark(var(--text-light-muted), var(--text-dark-muted));
-    padding: 0.5rem 0;
-    position: relative;
+.navbar {
+    a:link, a:visited {
+        text-decoration: none;
+        font-size: 0.95rem;
+        font-weight: 500;
+        color: light-dark(var(--text-light-muted), var(--text-dark-muted));
+        padding: 0.5rem 0;
+        position: relative;
+    }
+
+    a::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background: linear-gradient(90deg, var(--accent-orange), var(--accent-pink));
+        transition: width 0.3s ease;
+    }
+
+    a:hover,
+    a.active {
+        color: light-dark(var(--text-light-color), var(--text-dark-color));
+    }
+
+    a:hover::after,
+    a.active::after {
+        width: 100%;
+    }
+
 }
 
-.navbar a::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: linear-gradient(90deg, var(--accent-orange), var(--accent-pink));
-    transition: width 0.3s ease;
-}
-
-.navbar a:hover,
-.navbar a.active {
-    color: light-dark(var(--text-light-color), var(--text-dark-color));
-}
-
-.navbar a:hover::after,
-.navbar a.active::after {
-    width: 100%;
-}
 
 /* ----------------------------------------
    Footer
@@ -109,6 +119,7 @@ body {
     color: light-dark(var(--text-light-muted), var(--text-dark-muted));
 }
 
+
 /* ----------------------------------------
    Typography
    ---------------------------------------- */
@@ -120,6 +131,7 @@ body {
 .prose h1,
 .prose h2,
 .prose h3 {
+    font-family: var(--font-serif);
     color: light-dark(var(--text-light-color), var(--text-dark-color));
     line-height: 1.3;
 }
@@ -149,15 +161,13 @@ body {
     color: light-dark(var(--text-light-color), var(--text-dark-color));
 }
 
-.prose a {
-    color: var(--accent-pink);
+a:link, a:visited {
+    color: #0042cf;
     text-decoration: underline;
-    text-decoration-color: transparent;
-    text-underline-offset: 2px;
 }
 
-.prose a:hover {
-    text-decoration-color: var(--accent-pink);
+a:hover {
+    color: var(--accent-forest);
 }
 
 .prose ul,
@@ -189,7 +199,7 @@ body {
 }
 
 .prose blockquote {
-    border-left: 3px solid var(--accent-pink);
+    border-left: 3px solid var(--accent-forest);
     padding-left: 1.25rem;
     margin: 1.5rem 0;
     font-style: italic;
@@ -232,7 +242,7 @@ body {
     font-size: clamp(2rem, 5vw, 3rem);
     font-weight: 700;
     margin-bottom: 0.5rem;
-    background: linear-gradient(135deg, var(--accent-orange), var(--accent-pink), var(--accent-blue));
+    background: linear-gradient(135deg, var(--accent-terra), var(--accent-terra-dark));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -303,7 +313,7 @@ body {
     font-size: clamp(2rem, 5vw, 2.75rem);
     font-weight: 700;
     margin-bottom: 0.5rem;
-    background: linear-gradient(135deg, var(--accent-orange), var(--accent-pink), var(--accent-blue));
+    background: linear-gradient(135deg, var(--accent-terra), var(--accent-terra-dark));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -456,13 +466,10 @@ body {
     gap: 0.4rem;
     font-size: 0.85rem;
     font-weight: 600;
-    color: var(--accent-pink);
+    color: var(--accent-forest);
     text-decoration: none;
 }
 
-.event-link:hover {
-    color: var(--accent-orange);
-}
 
 .event-link svg {
     width: 16px;
@@ -491,7 +498,7 @@ body {
     font-weight: 700;
     margin-bottom: 2rem;
     text-align: center;
-    background: linear-gradient(135deg, var(--accent-orange), var(--accent-pink), var(--accent-blue));
+    background: linear-gradient(135deg, var(--accent-terra), var(--accent-terra-dark));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -561,7 +568,7 @@ body {
     line-height: 1.7;
     color: light-dark(var(--text-light-muted), var(--text-dark-muted));
     padding-left: 1.5rem;
-    border-left: 3px solid var(--accent-pink);
+    border-left: 3px solid var(--accent-forest);
 }
 
 .section-title {
@@ -653,7 +660,7 @@ body {
 
 .back-link:hover {
     color: light-dark(var(--text-light-color), var(--text-dark-color));
-    border-color: var(--accent-pink);
+    border-color: var(--accent-forest);
 }
 
 /* ----------------------------------------
