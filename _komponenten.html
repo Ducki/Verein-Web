@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Komponenten-Übersicht (intern)</title>
+    <link rel="shortcut icon" href="favicon.ico"/>
+    <link rel="icon" href="favicon.ico"/>
+    <link rel="stylesheet" href="styles.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <style>
+        /* Nur für diese Seite */
+        .kitchen-sink {
+            max-width: 72rem;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+        }
+        .section {
+            margin-bottom: 4rem;
+        }
+        .section-label {
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--accent-pink);
+            margin-bottom: 0.5rem;
+        }
+        .section-heading {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: light-dark(var(--text-light-color), var(--text-dark-color));
+        }
+        .section-desc {
+            font-size: 0.95rem;
+            color: light-dark(var(--text-light-muted), var(--text-dark-muted));
+            margin-bottom: 1.5rem;
+        }
+        .demo-box {
+            background: light-dark(var(--card-light-bg), var(--card-dark-bg));
+            border: 1px solid light-dark(var(--border-light), var(--border-dark));
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 1rem;
+        }
+        .demo-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            align-items: flex-start;
+        }
+        .code-hint {
+            font-family: ui-monospace, monospace;
+            font-size: 0.8rem;
+            color: light-dark(var(--text-light-muted), var(--text-dark-muted));
+            background: light-dark(#f3f4f6, #252525);
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+        }
+        hr {
+            border: none;
+            border-top: 1px solid light-dark(var(--border-light), var(--border-dark));
+            margin: 3rem 0;
+        }
+    </style>
+</head>
+<body>
+
+<div class="kitchen-sink">
+    <div class="page-header" style="margin-bottom: 2rem;">
+        <h1 class="page-title">Komponenten-Übersicht</h1>
+        <p class="page-subtitle">Alle verfügbaren Bausteine zum Kopieren</p>
+    </div>
+
+    <hr>
+
+    <!-- ============================================
+         TYPOGRAFIE
+         ============================================ -->
+    <div class="section">
+        <p class="section-label">Typografie</p>
+        <h2 class="section-heading">Prose-System für längere Texte</h2>
+        <p class="section-desc">
+            Wrapper-Klasse <code class="code-hint">class="prose"</code> für Artikel und längere Inhalte.
+            Enthält Styles für h1–h3, Absätze, Listen, Links, Zitate.
+        </p>
+        <div class="demo-box">
+            <div class="prose">
+                <h1>Überschrift Ebene 1</h1>
+                <p>
+                    Dies ist ein Beispiel-Absatz mit <strong>fettem Text</strong> und <em>kursivem Text</em>.
+                    Hier steht normaler Fließtext, der die Lesbarkeit demonstriert. Links sehen
+                    <a href="#">so aus</a> und werden beim Hover unterstrichen.
+                </p>
+
+                <h2>Überschrift Ebene 2</h2>
+                <p>
+                    Ein weiterer Absatz unter der zweiten Überschrift. Die maximale Breite ist auf
+                    65 Zeichen begrenzt für optimale Lesbarkeit.
+                </p>
+
+                <h3>Überschrift Ebene 3</h3>
+                <p>Die dritte Ebene für feinere Untergliederungen.</p>
+
+                <ul>
+                    <li>Aufzählungspunkt eins</li>
+                    <li>Aufzählungspunkt zwei</li>
+                    <li>Aufzählungspunkt drei</li>
+                </ul>
+
+                <ol>
+                    <li>Nummerierter Punkt</li>
+                    <li>Noch ein Punkt</li>
+                    <li>Dritter Punkt</li>
+                </ol>
+
+                <blockquote>
+                    Ein Zitat oder hervorgehobener Text mit pinkem Rand links.
+                </blockquote>
+
+                <p>Abschließender Absatz nach dem Zitat.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================
+         NAVIGATION
+         ============================================ -->
+    <div class="section">
+        <p class="section-label">Navigation</p>
+        <h2 class="section-heading">Header & Navbar</h2>
+        <p class="section-desc">
+            Die Navigation mit <code class="code-hint">class="active"</code> für den aktuellen Menüpunkt.
+        </p>
+        <div class="demo-box">
+            <header class="header" style="position: relative; border-radius: 8px;">
+                <nav class="navbar">
+                    <a href="#" class="active">Aktiver Link</a>
+                    <a href="#">Normaler Link</a>
+                    <a href="#">Noch einer</a>
+                </nav>
+            </header>
+        </div>
+    </div>
+
+    <!-- ============================================
+         HERO / HOMEPAGE
+         ============================================ -->
+    <div class="section">
+        <p class="section-label">Homepage</p>
+        <h2 class="section-heading">Hero-Bereich</h2>
+        <p class="section-desc">
+            Logo-Box, Titel mit Gradient und Untertitel.
+        </p>
+        <div class="demo-box" style="text-align: center;">
+            <div class="logo-wrapper" style="margin: 0 auto 1.5rem auto;">
+                <svg class="logo-svg" viewBox="0 0 372 359" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                     style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+                    <rect x="0" y="0" width="371.682" height="358.753" style="fill:none;"/>
+                    <path d="M153.631,117.817C188.659,157.145 204.629,214.028 203.298,249.77C216.586,223.092 254.515,174.07 254.515,174.07C254.113,174.783 217.785,264.296 216.324,298.075C333.191,354.909 434.787,167.594 313.958,178.461C352.702,158.083 357.339,73.046 275.829,101.054C331.043,11.337 78.988,-64.304 91.275,103.037C28.75,70.038 -55.173,183.085 62.074,240.412C14.765,322.897 129.536,315.642 164.415,296.083C162.534,251.316 134.312,219.314 102.872,182.918C102.872,182.918 156.391,206.839 170.161,230.465C173.954,174.808 153.631,117.817 153.631,117.817Z"
+                          style="fill-rule:nonzero;"/>
+                    <path d="M67.083,353.586C67.083,353.586 149.999,324.351 312.014,349.344C263.146,329.933 162.859,286.471 67.083,353.586Z"/>
+                </svg>
+            </div>
+            <h1 class="hero-title">Gradient-Titel</h1>
+            <p class="hero-subtitle">Untertitel in grau</p>
+        </div>
+    </div>
+
+    <!-- ============================================
+         CONTENT CARD
+         ============================================ -->
+    <div class="section">
+        <p class="section-label">Karten</p>
+        <h2 class="section-heading">Content Card</h2>
+        <p class="section-desc">
+            Allgemeine Inhaltskarte mit Teaser, Beschreibung und Tagline.
+        </p>
+        <div class="demo-box">
+            <div class="content-card" style="margin: 0 auto;">
+                <p class="teaser-text">
+                    Teaser-Text (fett, größer)
+                </p>
+                <p class="description">
+                    Beschreibungstext in gedämpfter Farbe. Hier steht der normale Fließtext
+                    mit weiteren Informationen.
+                </p>
+                <span class="tagline">Tagline in Gradient-Kursiv</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================
+         PAGE HEADER
+         ============================================ -->
+    <div class="section">
+        <p class="section-label">Unterseiten</p>
+        <h2 class="section-heading">Page Header</h2>
+        <p class="section-desc">
+            Überschrift für Unterseiten.
+        </p>
+        <div class="demo-box" style="text-align: center;">
+            <div class="page-header" style="margin-bottom: 0;">
+                <h1 class="page-title">Seitentitel</h1>
+                <p class="page-subtitle">Kurze Beschreibung der Seite</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================
+         EVENT CARDS
+         ============================================ -->
+    <div class="section">
+        <p class="section-label">Veranstaltungen</p>
+        <h2 class="section-heading">Event Cards – Übersicht</h2>
+        <p class="section-desc">
+            Karten für die Veranstaltungsübersicht. Farbvarianten:
+            <code class="code-hint">event-date-box</code> (Standard),
+            <code class="code-hint">cyan</code>,
+            <code class="code-hint">purple</code>,
+            <code class="code-hint">green</code>,
+            <code class="code-hint">tba</code> (Termin folgt).
+        </p>
+        <div class="events-grid">
+            <!-- Standard (Orange/Pink) -->
+            <article class="event-card">
+                <div class="event-card-header">
+                    <div class="event-date-box">
+                        <span class="event-date-day">15</span>
+                        <span class="event-date-month">Jan</span>
+                    </div>
+                    <div class="event-info">
+                        <h2 class="event-title">Standard (Orange/Pink)</h2>
+                        <p class="event-time">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <path d="M12 6v6l4 2"/>
+                            </svg>
+                            20:00 Uhr
+                        </p>
+                    </div>
+                </div>
+                <div class="event-card-body">
+                    <p class="event-description">Kurze Beschreibung der Veranstaltung.</p>
+                </div>
+                <div class="event-card-footer">
+                    <span class="event-location">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                            <circle cx="12" cy="9" r="2.5"/>
+                        </svg>
+                        Ortsangabe
+                    </span>
+                    <a class="event-link" href="#">
+                        Details
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                </div>
+            </article>
+
+            <!-- Cyan/Blau -->
+            <article class="event-card">
+                <div class="event-card-header">
+                    <div class="event-date-box cyan">
+                        <span class="event-date-day">22</span>
+                        <span class="event-date-month">Feb</span>
+                    </div>
+                    <div class="event-info">
+                        <h2 class="event-title">Cyan/Blau</h2>
+                        <p class="event-time">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <path d="M12 6v6l4 2"/>
+                            </svg>
+                            14:00 – 18:00 Uhr
+                        </p>
+                    </div>
+                </div>
+                <div class="event-card-body">
+                    <p class="event-description">Mit <code class="code-hint">class="event-date-box cyan"</code></p>
+                </div>
+                <div class="event-card-footer">
+                    <span class="event-location">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                            <circle cx="12" cy="9" r="2.5"/>
+                        </svg>
+                        Ortsangabe
+                    </span>
+                    <a class="event-link" href="#">
+                        Details
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                </div>
+            </article>
+
+            <!-- Purple/Pink -->
+            <article class="event-card">
+                <div class="event-card-header">
+                    <div class="event-date-box purple">
+                        <span class="event-date-day">08</span>
+                        <span class="event-date-month">März</span>
+                    </div>
+                    <div class="event-info">
+                        <h2 class="event-title">Lila/Pink</h2>
+                        <p class="event-time">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <path d="M12 6v6l4 2"/>
+                            </svg>
+                            19:30 Uhr
+                        </p>
+                    </div>
+                </div>
+                <div class="event-card-body">
+                    <p class="event-description">Mit <code class="code-hint">class="event-date-box purple"</code></p>
+                </div>
+                <div class="event-card-footer">
+                    <span class="event-location">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                            <circle cx="12" cy="9" r="2.5"/>
+                        </svg>
+                        Ortsangabe
+                    </span>
+                    <a class="event-link" href="#">
+                        Details
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                </div>
+            </article>
+
+            <!-- Grün/Cyan -->
+            <article class="event-card">
+                <div class="event-card-header">
+                    <div class="event-date-box green">
+                        <span class="event-date-day">21</span>
+                        <span class="event-date-month">Apr</span>
+                    </div>
+                    <div class="event-info">
+                        <h2 class="event-title">Grün/Cyan</h2>
+                        <p class="event-time">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <path d="M12 6v6l4 2"/>
+                            </svg>
+                            10:00 Uhr
+                        </p>
+                    </div>
+                </div>
+                <div class="event-card-body">
+                    <p class="event-description">Mit <code class="code-hint">class="event-date-box green"</code></p>
+                </div>
+                <div class="event-card-footer">
+                    <span class="event-location">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                            <circle cx="12" cy="9" r="2.5"/>
+                        </svg>
+                        Ortsangabe
+                    </span>
+                    <a class="event-link" href="#">
+                        Details
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                </div>
+            </article>
+
+            <!-- TBA (Termin folgt) -->
+            <article class="event-card">
+                <div class="event-card-header">
+                    <div class="event-date-box tba">
+                        <span class="event-date-tba">Termin</span>
+                        <span class="event-date-tba">folgt</span>
+                    </div>
+                    <div class="event-info">
+                        <h2 class="event-title">Termin folgt (TBA)</h2>
+                        <p class="event-time">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <path d="M12 6v6l4 2"/>
+                            </svg>
+                            Uhrzeit folgt
+                        </p>
+                    </div>
+                </div>
+                <div class="event-card-body">
+                    <p class="event-description">Mit <code class="code-hint">class="event-date-box tba"</code> und <code class="code-hint">event-date-tba</code> statt day/month.</p>
+                </div>
+                <div class="event-card-footer">
+                    <span class="event-location">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                            <circle cx="12" cy="9" r="2.5"/>
+                        </svg>
+                        Ort folgt
+                    </span>
+                    <a class="event-link" href="#">
+                        Details
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                        </svg>
+                    </a>
+                </div>
+            </article>
+        </div>
+    </div>
+
+    <!-- ============================================
+         EVENT DETAIL
+         ============================================ -->
+    <div class="section">
+        <p class="section-label">Veranstaltungen</p>
+        <h2 class="section-heading">Event Detail Card</h2>
+        <p class="section-desc">
+            Detailansicht einer Veranstaltung mit Meta-Informationen.
+        </p>
+        <div class="demo-box" style="text-align: center;">
+            <span class="event-badge">Veranstaltung</span>
+            <h1 class="event-detail-title">Event-Titel mit Gradient</h1>
+
+            <div class="event-detail-card" style="text-align: left; max-width: 38rem; margin: 0 auto;">
+                <div class="event-meta">
+                    <div class="meta-item">
+                        <div class="meta-icon">
+                            <svg viewBox="0 0 24 24" fill="none">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2" fill="white"/>
+                                <path d="M3 10h18M16 2v4M8 2v4" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <div class="meta-content">
+                            <span class="meta-label">Datum</span>
+                            <span class="meta-value">15. Januar 2025</span>
+                        </div>
+                    </div>
+                    <div class="meta-item">
+                        <div class="meta-icon">
+                            <svg viewBox="0 0 24 24">
+                                <circle cx="12" cy="12" r="9" fill="white"/>
+                                <path d="M12 6v6l4 2" stroke="#e84a8a" stroke-width="2" stroke-linecap="round"/>
+                            </svg>
+                        </div>
+                        <div class="meta-content">
+                            <span class="meta-label">Uhrzeit</span>
+                            <span class="meta-value">20:00 Uhr</span>
+                        </div>
+                    </div>
+                    <div class="meta-item">
+                        <div class="meta-icon">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" fill="white"/>
+                                <circle cx="12" cy="9" r="2.5" fill="#e84a8a"/>
+                            </svg>
+                        </div>
+                        <div class="meta-content">
+                            <span class="meta-label">Ort</span>
+                            <span class="meta-value">Bürgerhaus Sprötau</span>
+                        </div>
+                    </div>
+                </div>
+                <p class="event-detail-description">
+                    Beschreibungstext mit pinkem Rand links. Hier steht eine ausführlichere
+                    Beschreibung der Veranstaltung.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================
+         DJ CARDS
+         ============================================ -->
+    <div class="section">
+        <p class="section-label">Personen</p>
+        <h2 class="section-heading">DJ / Personen Cards</h2>
+        <p class="section-desc">
+            Karten für DJs, Künstler oder andere Personen.
+        </p>
+        <div class="dj-grid" style="max-width: 38rem;">
+            <div class="dj-card">
+                <div class="dj-avatar">
+                    <svg viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="10" fill="white"/>
+                        <circle cx="12" cy="12" r="3" fill="#3b82f6"/>
+                        <path d="M12 2v4M12 18v4M2 12h4M18 12h4" stroke="white" stroke-width="2"/>
+                    </svg>
+                </div>
+                <h3 class="dj-name">Name der Person</h3>
+                <span class="dj-genre">Kategorie · Tags</span>
+                <p class="dj-description">Kurze Beschreibung oder Bio.</p>
+            </div>
+            <div class="dj-card">
+                <div class="dj-avatar">
+                    <svg viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="10" fill="white"/>
+                        <circle cx="12" cy="12" r="3" fill="#3b82f6"/>
+                        <path d="M12 2v4M12 18v4M2 12h4M18 12h4" stroke="white" stroke-width="2"/>
+                    </svg>
+                </div>
+                <h3 class="dj-name">Zweite Person</h3>
+                <span class="dj-genre">Andere · Kategorie</span>
+                <p class="dj-description">Weitere Beschreibung hier.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================
+         LINKS & BUTTONS
+         ============================================ -->
+    <div class="section">
+        <p class="section-label">Interaktion</p>
+        <h2 class="section-heading">Links</h2>
+        <p class="section-desc">
+            Verschiedene Link-Stile.
+        </p>
+        <div class="demo-box">
+            <div class="demo-row">
+                <a class="back-link" href="#">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                        <path d="M19 12H5M12 19l-7-7 7-7"/>
+                    </svg>
+                    Back-Link (Zurück)
+                </a>
+
+                <a class="event-link" href="#">
+                    Event-Link
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" width="16" height="16">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================
+         BADGES
+         ============================================ -->
+    <div class="section">
+        <p class="section-label">Elemente</p>
+        <h2 class="section-heading">Badges</h2>
+        <p class="section-desc">
+            Kleine Label-Elemente.
+        </p>
+        <div class="demo-box">
+            <div class="demo-row">
+                <span class="event-badge">Event-Badge (Cyan/Blau)</span>
+                <span class="dj-genre">Genre-Badge (Orange/Pink)</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ============================================
+         FOOTER
+         ============================================ -->
+    <div class="section">
+        <p class="section-label">Layout</p>
+        <h2 class="section-heading">Footer</h2>
+        <p class="section-desc">
+            Der Seiten-Footer.
+        </p>
+        <div class="demo-box" style="padding: 0; overflow: hidden; border-radius: 8px;">
+            <footer class="footer" style="position: relative;">
+                <p class="footer-text">© 2024 Sprötau Begeistert e.V.</p>
+            </footer>
+        </div>
+    </div>
+
+    <!-- ============================================
+         FARBEN
+         ============================================ -->
+    <div class="section">
+        <p class="section-label">Design System</p>
+        <h2 class="section-heading">Farbpalette</h2>
+        <p class="section-desc">
+            Die verfügbaren Akzentfarben als CSS-Variablen.
+        </p>
+        <div class="demo-box">
+            <div class="demo-row">
+                <div style="text-align: center;">
+                    <div style="width: 60px; height: 60px; border-radius: 12px; background: var(--accent-orange); margin-bottom: 0.5rem;"></div>
+                    <code class="code-hint">--accent-orange</code>
+                </div>
+                <div style="text-align: center;">
+                    <div style="width: 60px; height: 60px; border-radius: 12px; background: var(--accent-pink); margin-bottom: 0.5rem;"></div>
+                    <code class="code-hint">--accent-pink</code>
+                </div>
+                <div style="text-align: center;">
+                    <div style="width: 60px; height: 60px; border-radius: 12px; background: var(--accent-cyan); margin-bottom: 0.5rem;"></div>
+                    <code class="code-hint">--accent-cyan</code>
+                </div>
+                <div style="text-align: center;">
+                    <div style="width: 60px; height: 60px; border-radius: 12px; background: var(--accent-blue); margin-bottom: 0.5rem;"></div>
+                    <code class="code-hint">--accent-blue</code>
+                </div>
+                <div style="text-align: center;">
+                    <div style="width: 60px; height: 60px; border-radius: 12px; background: var(--accent-purple); margin-bottom: 0.5rem;"></div>
+                    <code class="code-hint">--accent-purple</code>
+                </div>
+                <div style="text-align: center;">
+                    <div style="width: 60px; height: 60px; border-radius: 12px; background: var(--accent-green); margin-bottom: 0.5rem;"></div>
+                    <code class="code-hint">--accent-green</code>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <hr>
+
+    <p style="text-align: center; color: light-dark(var(--text-light-muted), var(--text-dark-muted)); font-size: 0.9rem;">
+        Diese Seite ist nicht verlinkt und nur für interne Zwecke.
+    </p>
+
+</div>
+
+</body>
+</html>

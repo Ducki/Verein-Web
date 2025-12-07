@@ -2,123 +2,25 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
-
     <link rel="shortcut icon" href="favicon.ico"/>
     <link rel="icon" href="favicon.ico"/>
-
+    <link rel="stylesheet" href="styles.css"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sprötau Begeistert e.V.</title>
-    <style>
-        :root {
-            color-scheme: light dark;
-
-            --page-dark-bg: #32302d;
-            --page-light-bg: #dfdbd6;
-
-            --text-light-color: #3c3838;
-            --text-dark-color: #d8d2c8;
-
-            --link-light-hover: #0245e3;
-            --link-dark-hover: #6ab0ff;
-
-            --link-light-color: #0b386a;
-            --link-dark-color: #9ec2e6;
-
-        }
-
-        html, body {
-            margin: 0;
-        }
-
-        body {
-            box-sizing: border-box;
-            font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            line-height: 1.55;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            justify-items: center;
-            height: 100vh;
-            background: light-dark(var(--page-light-bg), var(--page-dark-bg));
-            color: light-dark(var(--text-light-color), var(--text-dark-color));
-            padding: 1.5rem;
-        }
-
-        @media (prefers-color-scheme: dark) {
-            body {
-                letter-spacing: 0.01rem;
-            }
-
-            a:link, a:visited {
-                font-weight: 500;
-            }
-        }
-
-        .teaser-text {
-            font-weight: bold;
-            font-size: 1.1rem;
-        }
-
-        .box {
-            max-width: 38rem;
-        }
-
-        .logo-wrapper {
-            text-align: center;
-        }
-
-        .logo-svg {
-            fill: light-dark(var(--text-light-color), var(--text-dark-color));
-        }
-
-        a:link, a:visited {
-            color: light-dark(var(--link-light-color), var(--link-dark-color));
-        }
-
-        a:hover {
-            color: light-dark(var(--link-light-hover), var(--link-dark-hover));
-            text-decoration-style: dotted;
-
-            text-decoration-color: #dfac3b;
-        }
-
-        a:active {
-        }
-
-        .navbar {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            background: light-dark(var(--page-light-bg), var(--page-dark-bg));
-            padding: 1rem 0 0.5rem 0;
-            margin-bottom: 1.5rem;
-            border-bottom: 1px solid #ccc;
-        }
-
-        .navbar a {
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 1.05rem;
-            transition: color 0.2s;
-        }
-
-        .navbar a:hover {
-            text-decoration: underline;
-        }
-    </style>
 </head>
 <body>
-<div>
+<header class="header">
     <nav class="navbar">
-        <a href="#">Start</a>
+        <a href="index.html" class="active">Start</a>
         <a href="#">Über uns</a>
-        <a href="#">Veranstaltungen</a>
+        <a href="veranstaltungen.html">Veranstaltungen</a>
         <a href="#">Kontakt</a>
     </nav>
+</header>
 
+<main class="hero">
     <div class="logo-wrapper">
-        <svg class="logo-svg" width="80" viewBox="0 0 372 359" version="1.1" xmlns="http://www.w3.org/2000/svg"
-             xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/"
+        <svg class="logo-svg" viewBox="0 0 372 359" version="1.1" xmlns="http://www.w3.org/2000/svg"
              style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
             <rect id="ArtBoard1" x="0" y="0" width="371.682" height="358.753" style="fill:none;"/>
             <path d="M153.631,117.817C188.659,157.145 204.629,214.028 203.298,249.77C216.586,223.092 254.515,174.07 254.515,174.07C254.113,174.783 217.785,264.296 216.324,298.075C333.191,354.909 434.787,167.594 313.958,178.461C352.702,158.083 357.339,73.046 275.829,101.054C331.043,11.337 78.988,-64.304 91.275,103.037C28.75,70.038 -55.173,183.085 62.074,240.412C14.765,322.897 129.536,315.642 164.415,296.083C162.534,251.316 134.312,219.314 102.872,182.918C102.872,182.918 156.391,206.839 170.161,230.465C173.954,174.808 153.631,117.817 153.631,117.817Z"
@@ -127,16 +29,25 @@
         </svg>
     </div>
 
-    <article class="box">
+    <h1 class="hero-title">Sprötau Begeistert e.V.</h1>
+    <!--<p class="hero-subtitle">Dein Heimat- und Kulturverein</p>-->
+
+    <div class="content-card">
         <p class="teaser-text">
             Wir sind eine bunte Gemeinschaft aus Sprötau, die das Dorfleben mit Leidenschaft gestaltet.
+        </p>
+
+        <p class="description">
             Mit Veranstaltungen für alle Generationen, kreativen Ideen und gelebter Tradition
             bringen wir Menschen zusammen – egal ob jung oder alt, alteingesessen oder neu dazugekommen.
         </p>
 
-        <p class="font-normal">Sprötau <a href="">Begeistert</a> e.V. – <em>Dein Heimat- und Kulturverein.</em></p>
-        <p><a href="">Testg</a></p>
-    </article>
-</div>
+        <span class="tagline">Dein Heimat- und Kulturverein</span>
+    </div>
+</main>
+
+<footer class="footer">
+    <p class="footer-text">© 2024 Sprötau Begeistert e.V.</p>
+</footer>
 </body>
 </html>

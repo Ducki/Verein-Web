@@ -3,108 +3,114 @@
 <head>
     <meta charset="UTF-8">
     <title>Tanzveranstaltung – Sprötau Begeistert e.V.</title>
+    <link rel="shortcut icon" href="favicon.ico"/>
+    <link rel="icon" href="favicon.ico"/>
+    <link rel="stylesheet" href="styles.css"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body {
-            box-sizing: border-box;
-            font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            line-height: 1.55;
-            background: #dfdbd6;
-            color: #3c3838;
-            margin: 0;
-            padding: 1.5rem;
-            display: flex;
-            justify-content: center;
-            align-items: flex-start;
-            min-height: 100vh;
-        }
-        .navbar {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            background: #dfdbd6;
-            padding: 1rem 0 0.5rem 0;
-            margin-bottom: 1.5rem;
-            border-bottom: 1px solid #ccc;
-        }
-        .navbar a {
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 1.05rem;
-            color: #0b386a;
-            transition: color 0.2s;
-        }
-        .navbar a:hover {
-            color: #0245e3;
-            text-decoration: underline;
-        }
-        .box {
-            max-width: 38rem;
-            background: #fff;
-            border-radius: 0.5rem;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-            padding: 2rem;
-        }
-        .event-title {
-            font-size: 2rem;
-            font-weight: bold;
-            margin-bottom: 0.5rem;
-        }
-        .event-info {
-            margin-bottom: 1.5rem;
-        }
-        .dj-list {
-            list-style: none;
-            padding: 0;
-        }
-        .dj-list li {
-            margin-bottom: 1rem;
-        }
-        .back-link {
-            display: inline-block;
-            margin-top: 2rem;
-            color: #0b386a;
-            text-decoration: none;
-        }
-        .back-link:hover {
-            color: #0245e3;
-            text-decoration: underline;
-        }
-    </style>
 </head>
 <body>
-<div>
+<header class="header">
     <nav class="navbar">
         <a href="index.html">Start</a>
         <a href="#">Über uns</a>
-        <a href="#">Veranstaltungen</a>
+        <a href="veranstaltungen.html" class="active">Veranstaltungen</a>
         <a href="#">Kontakt</a>
     </nav>
-    <div class="box">
-        <div class="event-title">Tanznacht Sprötau 2024</div>
-        <div class="event-info">
-            <strong>Datum:</strong> 12. Oktober 2024<br>
-            <strong>Uhrzeit:</strong> 20:00 Uhr<br>
-            <strong>Ort:</strong> Bürgerhaus Sprötau, Musterstraße 1, 99999 Sprötau
+</header>
+
+<main class="main-content narrow" style="display: flex; flex-direction: column; align-items: center;">
+    <span class="event-badge">Veranstaltung</span>
+    <h1 class="event-detail-title">Tanznacht Sprötau 2024</h1>
+
+    <div class="event-detail-card">
+        <div class="event-meta">
+            <div class="meta-item">
+                <div class="meta-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2" fill="white" stroke="none"/>
+                        <path d="M3 10h18M16 2v4M8 2v4" stroke="white" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <div class="meta-content">
+                    <span class="meta-label">Datum</span>
+                    <span class="meta-value">12. Oktober 2024</span>
+                </div>
+            </div>
+
+            <div class="meta-item">
+                <div class="meta-icon">
+                    <svg viewBox="0 0 24 24">
+                        <circle cx="12" cy="12" r="9" fill="white"/>
+                        <path d="M12 6v6l4 2" stroke="#e84a8a" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <div class="meta-content">
+                    <span class="meta-label">Uhrzeit</span>
+                    <span class="meta-value">20:00 Uhr</span>
+                </div>
+            </div>
+
+            <div class="meta-item">
+                <div class="meta-icon">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" fill="white"/>
+                        <circle cx="12" cy="9" r="2.5" fill="#e84a8a"/>
+                    </svg>
+                </div>
+                <div class="meta-content">
+                    <span class="meta-label">Ort</span>
+                    <span class="meta-value">Bürgerhaus Sprötau, Musterstraße 1</span>
+                </div>
+            </div>
         </div>
-        <p>
-            Erlebe eine unvergessliche Nacht voller Musik, Tanz und guter Stimmung! Zwei angesagte DJs sorgen für die besten Beats und bringen die Tanzfläche zum Beben. Für Getränke und Snacks ist gesorgt. Sei dabei und feiere mit uns!
+
+        <p class="event-detail-description">
+            Erlebe eine unvergessliche Nacht voller Musik, Tanz und guter Stimmung!
+            Zwei angesagte DJs sorgen für die besten Beats und bringen die Tanzfläche zum Beben.
+            Für Getränke und Snacks ist gesorgt.
         </p>
-        <h2>Unsere DJs</h2>
-        <ul class="dj-list">
-            <li>
-                <strong>DJ Beatmaster</strong><br>
-                <em>Genre:</em> House, Charts<br>
-                <em>Beschreibung:</em> Platzhalter für Infos über DJ Beatmaster.
-            </li>
-            <li>
-                <strong>DJane Groove</strong><br>
-                <em>Genre:</em> Electro, Pop<br>
-                <em>Beschreibung:</em> Platzhalter für Infos über DJane Groove.
-            </li>
-        </ul>
-        <a class="back-link" href="index.html">&larr; Zurück zur Startseite</a>
     </div>
-</div>
+
+    <h2 class="section-title">Unsere DJs</h2>
+
+    <div class="dj-grid">
+        <div class="dj-card">
+            <div class="dj-avatar">
+                <svg viewBox="0 0 24 24">
+                    <circle cx="12" cy="12" r="10" fill="white"/>
+                    <circle cx="12" cy="12" r="3" fill="#3b82f6"/>
+                    <path d="M12 2v4M12 18v4M2 12h4M18 12h4" stroke="white" stroke-width="2"/>
+                </svg>
+            </div>
+            <h3 class="dj-name">DJ Beatmaster</h3>
+            <span class="dj-genre">House · Charts</span>
+            <p class="dj-description">Platzhalter für Infos über DJ Beatmaster.</p>
+        </div>
+
+        <div class="dj-card">
+            <div class="dj-avatar">
+                <svg viewBox="0 0 24 24">
+                    <circle cx="12" cy="12" r="10" fill="white"/>
+                    <circle cx="12" cy="12" r="3" fill="#3b82f6"/>
+                    <path d="M12 2v4M12 18v4M2 12h4M18 12h4" stroke="white" stroke-width="2"/>
+                </svg>
+            </div>
+            <h3 class="dj-name">DJane Groove</h3>
+            <span class="dj-genre">Electro · Pop</span>
+            <p class="dj-description">Platzhalter für Infos über DJane Groove.</p>
+        </div>
+    </div>
+
+    <a class="back-link" href="veranstaltungen.html">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <path d="M19 12H5M12 19l-7-7 7-7"/>
+        </svg>
+        Zurück zur Übersicht
+    </a>
+</main>
+
+<footer class="footer">
+    <p class="footer-text">© 2024 Sprötau Begeistert e.V.</p>
+</footer>
 </body>
 </html>
