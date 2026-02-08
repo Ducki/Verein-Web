@@ -1,9 +1,46 @@
 /* ========================================
    Sprötau Begeistert e.V. - NEO-BRUTALIST
-   Roh. Echt. Auffällig.
    ======================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Space+Mono:wght@400;700&display=swap');
+@font-face {
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('./fonts/space-grotesk-v22-latin-regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 500;
+    font-display: swap;
+    src: url('./fonts/space-grotesk-v22-latin-500.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Space Grotesk';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('./fonts/space-grotesk-v22-latin-700.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Space Mono';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('./fonts/space-mono-v17-latin-regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Space Mono';
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url('./fonts/space-mono-v17-latin-700.woff2') format('woff2');
+}
 
 :root {
     color-scheme: light dark;
@@ -12,8 +49,7 @@
     --font-display: 'Space Mono', monospace;
     --font-body: 'Space Grotesk', system-ui, sans-serif;
 
-    /* Palette inspiriert vom Logo - Aquarell-Vibes */
-    --turquoise: #22b8b0;
+    --turquoise: #2cc3bb;
     --turquoise-deep: #1a9e97;
     --coral: #e8605a;
     --coral-light: #f07a6e;
@@ -240,14 +276,13 @@ a:hover {
     align-items: center;
     padding: 4rem 1.5rem;
     text-align: center;
-    background:
-        repeating-linear-gradient(
+    background: repeating-linear-gradient(
             -45deg,
             transparent,
             transparent 20px,
-            light-dark(rgba(0,0,0,0.02), rgba(255,255,255,0.02)) 20px,
-            light-dark(rgba(0,0,0,0.02), rgba(255,255,255,0.02)) 40px
-        );
+            light-dark(rgba(0, 0, 0, 0.02), rgba(255, 255, 255, 0.02)) 20px,
+            light-dark(rgba(0, 0, 0, 0.02), rgba(255, 255, 255, 0.02)) 40px
+    );
 }
 
 .logo-wrapper {
@@ -260,12 +295,11 @@ a:hover {
     align-items: center;
     justify-content: center;
     margin-bottom: 2rem;
-    transform: rotate(-3deg);
     transition: all 0.2s ease;
 }
 
 .logo-wrapper:hover {
-    transform: rotate(3deg) scale(1.05);
+    transform: scale(1.05);
     box-shadow: var(--shadow-brutal-hover);
 }
 
@@ -315,15 +349,15 @@ a:hover {
     right: 0;
     height: 8px;
     background: repeating-linear-gradient(
-        90deg,
-        var(--turquoise) 0,
-        var(--turquoise) 25%,
-        var(--coral) 25%,
-        var(--coral) 50%,
-        var(--sunset-orange) 50%,
-        var(--sunset-orange) 75%,
-        var(--deep-blue) 75%,
-        var(--deep-blue) 100%
+            90deg,
+            var(--turquoise) 0,
+            var(--turquoise) 25%,
+            var(--coral) 25%,
+            var(--coral) 50%,
+            var(--sunset-orange) 50%,
+            var(--sunset-orange) 75%,
+            var(--deep-blue) 75%,
+            var(--deep-blue) 100%
     );
 }
 
@@ -439,21 +473,6 @@ a:hover {
     box-shadow: 9px 9px 0 var(--pure-black);
 }
 
-.event-card:nth-child(odd) {
-    transform: rotate(-0.5deg);
-}
-
-.event-card:nth-child(even) {
-    transform: rotate(0.5deg);
-}
-
-.event-card:nth-child(odd):hover {
-    transform: rotate(-0.5deg) translate(-4px, -4px);
-}
-
-.event-card:nth-child(even):hover {
-    transform: rotate(0.5deg) translate(-4px, -4px);
-}
 
 .event-card-header {
     padding: 1.5rem 1.5rem 1rem 1.5rem;
@@ -477,15 +496,15 @@ a:hover {
     color: var(--off-white);
 }
 
-.event-date-box.cyan {
+.event-date-box.blue {
     background: var(--deep-blue);
 }
 
-.event-date-box.purple {
+.event-date-box.coral {
     background: var(--coral);
 }
 
-.event-date-box.green {
+.event-date-box.orange {
     background: var(--sunset-orange);
 }
 
@@ -512,7 +531,7 @@ a:hover {
 
 .event-date-tba {
     font-family: var(--font-display);
-    font-size: 0.6rem;
+    font-size: 0.75rem;
     font-weight: 700;
     text-transform: uppercase;
 }
@@ -609,6 +628,18 @@ a:hover {
 .event-link svg {
     width: 14px;
     height: 14px;
+}
+
+.event-notice {
+    font-family: var(--font-display);
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: light-dark(var(--text-light-muted), var(--text-dark-muted));
+    padding: 0.4rem 0.75rem;
+    border: 2px dashed light-dark(#ccc, #444);
+    background: transparent;
 }
 
 /* ----------------------------------------
@@ -754,13 +785,6 @@ a:hover {
     box-shadow: 9px 9px 0 var(--pure-black);
 }
 
-.dj-card:first-child {
-    transform: rotate(-1deg);
-}
-
-.dj-card:last-child {
-    transform: rotate(1deg);
-}
 
 .dj-avatar {
     width: 80px;

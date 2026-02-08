@@ -209,21 +209,23 @@
     </div>
 
     <!-- ============================================
-         EVENT CARDS
+         EVENT CARDS - DATUM-VARIANTEN
          ============================================ -->
     <div class="section">
         <p class="section-label">Veranstaltungen</p>
-        <h2 class="section-heading">Event Cards – Übersicht</h2>
+        <h2 class="section-heading">Event Cards – Datum-Varianten</h2>
         <p class="section-desc">
-            Karten für die Veranstaltungsübersicht. Farbvarianten:
-            <code class="code-hint">event-date-box</code> (Standard),
-            <code class="code-hint">cyan</code>,
-            <code class="code-hint">purple</code>,
-            <code class="code-hint">green</code>,
-            <code class="code-hint">tba</code> (Termin folgt).
+            Farbvarianten für die Datums-Box nach Event-Kategorie:
         </p>
+        <ul class="prose-list" style="margin-bottom: 1.5rem;">
+            <li><code class="code-hint">event-date-box</code> <strong>Standard (Schwarz)</strong> – Allgemeine Events ohne spezielle Kategorie</li>
+            <li><code class="code-hint">blue</code> <strong>Blau</strong> – Kino, Film, ruhigere/kulturelle Events, Winterliches (Glühwein)</li>
+            <li><code class="code-hint">coral</code> <strong>Coral/Rot</strong> – Feste, Musik, Tanz, Highlights (Kirmes, Tanz im Wald)</li>
+            <li><code class="code-hint">orange</code> <strong>Orange</strong> – Gemeinschaftsaktionen, Mitmach-Events (Frühjahrsputz, Offene Höfe)</li>
+            <li><code class="code-hint">tba</code> <strong>Grau gestrichelt</strong> – Termin folgt, wiederkehrende Events ohne festes Datum</li>
+        </ul>
         <div class="events-grid">
-            <!-- Standard (Orange/Pink) -->
+            <!-- Standard -->
             <article class="event-card">
                 <div class="event-card-header">
                     <div class="event-date-box">
@@ -231,7 +233,7 @@
                         <span class="event-date-month">Jan</span>
                     </div>
                     <div class="event-info">
-                        <h2 class="event-title">Standard (Orange/Pink)</h2>
+                        <h2 class="event-title">Standard (Schwarz)</h2>
                         <p class="event-time">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <circle cx="12" cy="12" r="10"/>
@@ -242,7 +244,7 @@
                     </div>
                 </div>
                 <div class="event-card-body">
-                    <p class="event-description">Kurze Beschreibung der Veranstaltung.</p>
+                    <p class="event-description">Standard ohne Farbklasse.</p>
                 </div>
                 <div class="event-card-footer">
                     <span class="event-location">
@@ -252,35 +254,29 @@
                         </svg>
                         Ortsangabe
                     </span>
-                    <a class="event-link" href="#">
-                        Details
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-                            <path d="M5 12h14M12 5l7 7-7 7"/>
-                        </svg>
-                    </a>
                 </div>
             </article>
 
-            <!-- Cyan/Blau -->
+            <!-- Cyan -->
             <article class="event-card">
                 <div class="event-card-header">
-                    <div class="event-date-box cyan">
+                    <div class="event-date-box blue">
                         <span class="event-date-day">22</span>
                         <span class="event-date-month">Feb</span>
                     </div>
                     <div class="event-info">
-                        <h2 class="event-title">Cyan/Blau</h2>
+                        <h2 class="event-title">Blue (Blau)</h2>
                         <p class="event-time">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <circle cx="12" cy="12" r="10"/>
                                 <path d="M12 6v6l4 2"/>
                             </svg>
-                            14:00 – 18:00 Uhr
+                            14:00 Uhr
                         </p>
                     </div>
                 </div>
                 <div class="event-card-body">
-                    <p class="event-description">Mit <code class="code-hint">class="event-date-box cyan"</code></p>
+                    <p class="event-description">Mit <code class="code-hint">class="event-date-box blue"</code></p>
                 </div>
                 <div class="event-card-footer">
                     <span class="event-location">
@@ -290,24 +286,18 @@
                         </svg>
                         Ortsangabe
                     </span>
-                    <a class="event-link" href="#">
-                        Details
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-                            <path d="M5 12h14M12 5l7 7-7 7"/>
-                        </svg>
-                    </a>
                 </div>
             </article>
 
-            <!-- Purple/Pink -->
+            <!-- Purple -->
             <article class="event-card">
                 <div class="event-card-header">
-                    <div class="event-date-box purple">
+                    <div class="event-date-box coral">
                         <span class="event-date-day">08</span>
                         <span class="event-date-month">März</span>
                     </div>
                     <div class="event-info">
-                        <h2 class="event-title">Lila/Pink</h2>
+                        <h2 class="event-title">Coral (Rot)</h2>
                         <p class="event-time">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <circle cx="12" cy="12" r="10"/>
@@ -318,7 +308,7 @@
                     </div>
                 </div>
                 <div class="event-card-body">
-                    <p class="event-description">Mit <code class="code-hint">class="event-date-box purple"</code></p>
+                    <p class="event-description">Mit <code class="code-hint">class="event-date-box coral"</code></p>
                 </div>
                 <div class="event-card-footer">
                     <span class="event-location">
@@ -328,24 +318,18 @@
                         </svg>
                         Ortsangabe
                     </span>
-                    <a class="event-link" href="#">
-                        Details
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-                            <path d="M5 12h14M12 5l7 7-7 7"/>
-                        </svg>
-                    </a>
                 </div>
             </article>
 
-            <!-- Grün/Cyan -->
+            <!-- Green -->
             <article class="event-card">
                 <div class="event-card-header">
-                    <div class="event-date-box green">
+                    <div class="event-date-box orange">
                         <span class="event-date-day">21</span>
                         <span class="event-date-month">Apr</span>
                     </div>
                     <div class="event-info">
-                        <h2 class="event-title">Grün/Cyan</h2>
+                        <h2 class="event-title">Orange</h2>
                         <p class="event-time">
                             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                                 <circle cx="12" cy="12" r="10"/>
@@ -356,7 +340,7 @@
                     </div>
                 </div>
                 <div class="event-card-body">
-                    <p class="event-description">Mit <code class="code-hint">class="event-date-box green"</code></p>
+                    <p class="event-description">Mit <code class="code-hint">class="event-date-box orange"</code></p>
                 </div>
                 <div class="event-card-footer">
                     <span class="event-location">
@@ -366,16 +350,87 @@
                         </svg>
                         Ortsangabe
                     </span>
-                    <a class="event-link" href="#">
-                        Details
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
-                            <path d="M5 12h14M12 5l7 7-7 7"/>
+                </div>
+            </article>
+        </div>
+    </div>
+
+    <!-- ============================================
+         EVENT CARDS - SPEZIAL-VARIANTEN
+         ============================================ -->
+    <div class="section">
+        <p class="section-label">Veranstaltungen</p>
+        <h2 class="section-heading">Event Cards – Spezial-Varianten</h2>
+        <p class="section-desc">
+            Mehrtägige Events, wiederkehrende Termine und "Termin folgt".
+            Mit <code class="code-hint">event-date-tba</code> für zweizeiligen Text in der Datums-Box.
+        </p>
+        <div class="events-grid">
+            <!-- Mehrtägig -->
+            <article class="event-card">
+                <div class="event-card-header">
+                    <div class="event-date-box coral">
+                        <span class="event-date-tba">8.–10.</span>
+                        <span class="event-date-tba">Mai</span>
+                    </div>
+                    <div class="event-info">
+                        <h2 class="event-title">Mehrtägiges Event</h2>
+                        <p class="event-time">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <path d="M12 6v6l4 2"/>
+                            </svg>
+                            Ganzes Wochenende
+                        </p>
+                    </div>
+                </div>
+                <div class="event-card-body">
+                    <p class="event-description">Farbe + <code class="code-hint">event-date-tba</code> für kleinere Schrift bei Datum-Spannen.</p>
+                </div>
+                <div class="event-card-footer">
+                    <span class="event-location">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                            <circle cx="12" cy="9" r="2.5"/>
                         </svg>
-                    </a>
+                        Ortsangabe
+                    </span>
                 </div>
             </article>
 
-            <!-- TBA (Termin folgt) -->
+            <!-- Wiederkehrend -->
+            <article class="event-card">
+                <div class="event-card-header">
+                    <div class="event-date-box tba">
+                        <span class="event-date-tba">Letzter</span>
+                        <span class="event-date-tba">Freitag</span>
+                    </div>
+                    <div class="event-info">
+                        <h2 class="event-title">Wiederkehrendes Event</h2>
+                        <p class="event-time">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <path d="M12 6v6l4 2"/>
+                            </svg>
+                            Monatlich
+                        </p>
+                    </div>
+                </div>
+                <div class="event-card-body">
+                    <p class="event-description">Mit <code class="code-hint">tba</code> und flexiblem Text wie "Letzter Freitag".</p>
+                </div>
+                <div class="event-card-footer">
+                    <span class="event-location">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                            <circle cx="12" cy="9" r="2.5"/>
+                        </svg>
+                        Wechselnder Ort
+                    </span>
+                </div>
+            </article>
+
+            <!-- Termin folgt -->
             <article class="event-card">
                 <div class="event-card-header">
                     <div class="event-date-box tba">
@@ -394,7 +449,7 @@
                     </div>
                 </div>
                 <div class="event-card-body">
-                    <p class="event-description">Mit <code class="code-hint">class="event-date-box tba"</code> und <code class="code-hint">event-date-tba</code> statt day/month.</p>
+                    <p class="event-description">Grauer, gestrichelter Rahmen mit <code class="code-hint">class="event-date-box tba"</code>.</p>
                 </div>
                 <div class="event-card-footer">
                     <span class="event-location">
@@ -404,12 +459,121 @@
                         </svg>
                         Ort folgt
                     </span>
+                </div>
+            </article>
+        </div>
+    </div>
+
+    <!-- ============================================
+         EVENT CARDS - FOOTER-VARIANTEN
+         ============================================ -->
+    <div class="section">
+        <p class="section-label">Veranstaltungen</p>
+        <h2 class="section-heading">Event Cards – Footer-Varianten</h2>
+        <p class="section-desc">
+            Drei Varianten für den Footer: Mit Details-Link, mit "Details folgen"-Hinweis, oder nur Ort.
+        </p>
+        <div class="events-grid">
+            <!-- Mit Details-Link -->
+            <article class="event-card">
+                <div class="event-card-header">
+                    <div class="event-date-box">
+                        <span class="event-date-day">15</span>
+                        <span class="event-date-month">Jan</span>
+                    </div>
+                    <div class="event-info">
+                        <h2 class="event-title">Mit Details-Link</h2>
+                        <p class="event-time">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <path d="M12 6v6l4 2"/>
+                            </svg>
+                            20:00 Uhr
+                        </p>
+                    </div>
+                </div>
+                <div class="event-card-body">
+                    <p class="event-description">Wenn es eine Detail-Seite gibt, wird ein aktiver Link angezeigt.</p>
+                </div>
+                <div class="event-card-footer">
+                    <span class="event-location">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                            <circle cx="12" cy="9" r="2.5"/>
+                        </svg>
+                        Bürgerhaus
+                    </span>
                     <a class="event-link" href="#">
                         Details
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
                             <path d="M5 12h14M12 5l7 7-7 7"/>
                         </svg>
                     </a>
+                </div>
+            </article>
+
+            <!-- Mit "Details folgen" -->
+            <article class="event-card">
+                <div class="event-card-header">
+                    <div class="event-date-box blue">
+                        <span class="event-date-day">22</span>
+                        <span class="event-date-month">Feb</span>
+                    </div>
+                    <div class="event-info">
+                        <h2 class="event-title">Details folgen</h2>
+                        <p class="event-time">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <path d="M12 6v6l4 2"/>
+                            </svg>
+                            Abends
+                        </p>
+                    </div>
+                </div>
+                <div class="event-card-body">
+                    <p class="event-description">Dezenter Hinweis mit <code class="code-hint">class="event-notice"</code>.</p>
+                </div>
+                <div class="event-card-footer">
+                    <span class="event-location">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                            <circle cx="12" cy="9" r="2.5"/>
+                        </svg>
+                        Waldbühne
+                    </span>
+                    <span class="event-notice">Details folgen</span>
+                </div>
+            </article>
+
+            <!-- Nur Ort -->
+            <article class="event-card">
+                <div class="event-card-header">
+                    <div class="event-date-box orange">
+                        <span class="event-date-day">28</span>
+                        <span class="event-date-month">März</span>
+                    </div>
+                    <div class="event-info">
+                        <h2 class="event-title">Nur Ort (komplett)</h2>
+                        <p class="event-time">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="12" cy="12" r="10"/>
+                                <path d="M12 6v6l4 2"/>
+                            </svg>
+                            Vormittags
+                        </p>
+                    </div>
+                </div>
+                <div class="event-card-body">
+                    <p class="event-description">Wenn alle Infos in der Karte stehen, reicht nur der Ort.</p>
+                </div>
+                <div class="event-card-footer">
+                    <span class="event-location">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+                            <circle cx="12" cy="9" r="2.5"/>
+                        </svg>
+                        Treffpunkt: DGH
+                    </span>
                 </div>
             </article>
         </div>
