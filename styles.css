@@ -68,7 +68,7 @@
     --page-dark-bg: #0a0a0a;
     --card-dark-bg: #1a1a1a;
     --text-dark: #fffef5;
-    --text-dark-muted: #999999;
+    --text-dark-muted: hsl(0, 0%, 40%);
 
     /* Brutale Schatten */
     --shadow-brutal: 5px 5px 0 var(--pure-black);
@@ -966,44 +966,112 @@ a:hover {
 /* Dark mode anpassungen */
 @media (prefers-color-scheme: dark) {
     :root {
-        --shadow-brutal: 5px 5px 0 var(--turquoise);
-        --shadow-brutal-sm: 3px 3px 0 var(--turquoise);
-        --shadow-brutal-hover: 7px 7px 0 var(--turquoise);
+        /* Gedämpfte Dark-Palette – kein reines Schwarz/Weiß mehr */
+        --page-dark-bg: #0e1419;
+        --card-dark-bg: #192028;
+        --text-dark: hsl(42, 20%, 83%);
+        --text-dark-muted: hsl(48, 4%, 70%);
+
+        /* Schatten: leicht gedämpftes Turquoise statt knalligem #2cc3bb */
+        --shadow-brutal: 5px 5px 0 var(--turquoise-deep);
+        --shadow-brutal-sm: 3px 3px 0 var(--turquoise-deep);
+        --shadow-brutal-hover: 7px 7px 0 var(--turquoise-deep);
+
+        /* Rahmen: mittleres Grau-Blau, sichtbar aber nicht grell */
+        --border-thick: 3px solid #3a4a58;
+        --border-thin: 2px solid #3a4a58;
     }
 
+    /* Links: gedämpftes Turquoise statt vollem Cyan */
+    a:link, a:visited {
+        color: var(--turquoise-deep);
+    }
+
+    a:hover {
+        background: var(--turquoise-deep);
+        color: #ddd8cc;
+    }
+
+    /* Navbar */
     .navbar a {
         background: var(--card-dark-bg);
         color: var(--text-dark);
-        border-color: var(--turquoise);
+        border-color: #3a4a58;
     }
 
     .navbar a:hover,
     .navbar a.active {
-        background: var(--turquoise);
-        color: var(--pure-black);
+        background: var(--turquoise-deep);
+        color: var(--page-dark-bg);
+        border-color: var(--turquoise-deep);
     }
 
+    /* Back-Link */
+    .back-link {
+        background: var(--card-dark-bg);
+        color: var(--text-dark);
+    }
+
+    .back-link:hover {
+        background: var(--turquoise-deep);
+        color: var(--page-dark-bg);
+    }
+
+    /* Event-Cards */
     .event-card-header {
-        background: var(--coral);
+        background: #1e3248;
+    }
+
+    .event-card:hover {
+        box-shadow: 9px 9px 0 var(--turquoise-deep);
     }
 
     .event-title {
-        color: var(--off-white);
+        color: var(--text-dark);
     }
 
     .event-time {
-        color: var(--off-white);
+        color: var(--text-dark);
+        opacity: 0.85;
     }
 
+    .event-date-box.tba {
+        border: 2px dashed #3a4a58;
+        color: var(--text-dark-muted);
+    }
+
+    a.event-link {
+        background: var(--turquoise-deep);
+        color: var(--page-dark-bg);
+        border-color: #3a4a58;
+    }
+
+    a.event-link:hover {
+        background: var(--text-dark);
+        color: var(--page-dark-bg);
+    }
+
+    /* DJ-Cards */
+    .dj-card:hover {
+        box-shadow: 9px 9px 0 var(--turquoise-deep);
+    }
+
+    /* Eventbeschreibung */
+    .event-detail-description {
+        background: #131c24;
+        border-color: #3a4a58;
+    }
+
+    /* Vorstand */
     .board-member {
-        background: var(--coral);
+        background: #1e3248;
     }
 
     .board-member strong {
-        color: var(--off-white);
+        color: var(--text-dark);
     }
 
     .board-placeholder {
-        color: rgba(255, 255, 255, 0.7);
+        color: var(--text-dark-muted);
     }
 }
