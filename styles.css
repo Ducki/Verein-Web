@@ -740,7 +740,7 @@ a:hover {
     line-height: 1.7;
     color: light-dark(var(--text-light-muted), var(--text-dark-muted));
     padding: 1.5rem;
-    background: var(--turquoise);
+    background: light-dark(var(--turquoise), var(--pure-black));
     border: var(--border-thin);
     font-style: normal;
 }
