@@ -15,9 +15,11 @@
             margin: 0 auto;
             padding: 2rem 1.5rem;
         }
+
         .section {
             margin-bottom: 4rem;
         }
+
         .section-label {
             font-size: 0.75rem;
             font-weight: 600;
@@ -26,17 +28,20 @@
             color: var(--accent-pink);
             margin-bottom: 0.5rem;
         }
+
         .section-heading {
             font-size: 1.5rem;
             font-weight: 700;
             margin-bottom: 0.5rem;
             color: light-dark(var(--text-light-color), var(--text-dark-color));
         }
+
         .section-desc {
             font-size: 0.95rem;
             color: light-dark(var(--text-light-muted), var(--text-dark-muted));
             margin-bottom: 1.5rem;
         }
+
         .demo-box {
             background: light-dark(var(--card-light-bg), var(--card-dark-bg));
             border: 1px solid light-dark(var(--border-light), var(--border-dark));
@@ -44,12 +49,14 @@
             padding: 2rem;
             margin-bottom: 1rem;
         }
+
         .demo-row {
             display: flex;
             flex-wrap: wrap;
             gap: 1rem;
             align-items: flex-start;
         }
+
         .code-hint {
             font-family: ui-monospace, monospace;
             font-size: 0.8rem;
@@ -58,6 +65,7 @@
             padding: 0.25rem 0.5rem;
             border-radius: 4px;
         }
+
         hr {
             border: none;
             border-top: 1px solid light-dark(var(--border-light), var(--border-dark));
@@ -218,11 +226,21 @@
             Farbvarianten für die Datums-Box nach Event-Kategorie:
         </p>
         <ul class="prose-list" style="margin-bottom: 1.5rem;">
-            <li><code class="code-hint">event-date-box</code> <strong>Standard (Schwarz)</strong> – Allgemeine Events ohne spezielle Kategorie</li>
-            <li><code class="code-hint">blue</code> <strong>Blau</strong> – Kino, Film, ruhigere/kulturelle Events, Winterliches (Glühwein)</li>
-            <li><code class="code-hint">coral</code> <strong>Coral/Rot</strong> – Feste, Musik, Tanz, Highlights (Kirmes, Tanz im Wald)</li>
-            <li><code class="code-hint">orange</code> <strong>Orange</strong> – Gemeinschaftsaktionen, Mitmach-Events (Frühjahrsputz, Offene Höfe)</li>
-            <li><code class="code-hint">tba</code> <strong>Grau gestrichelt</strong> – Termin folgt, wiederkehrende Events ohne festes Datum</li>
+            <li><code class="code-hint">event-date-box</code> <strong>Standard (Schwarz)</strong> – Allgemeine Events
+                ohne spezielle Kategorie
+            </li>
+            <li><code class="code-hint">blue</code> <strong>Blau</strong> – Kino, Film, ruhigere/kulturelle Events,
+                Winterliches (Glühwein)
+            </li>
+            <li><code class="code-hint">coral</code> <strong>Coral/Rot</strong> – Feste, Musik, Tanz, Highlights
+                (Kirmes, Tanz im Wald)
+            </li>
+            <li><code class="code-hint">orange</code> <strong>Orange</strong> – Gemeinschaftsaktionen, Mitmach-Events
+                (Frühjahrsputz, Offene Höfe)
+            </li>
+            <li><code class="code-hint">tba</code> <strong>Grau gestrichelt</strong> – Termin folgt, wiederkehrende
+                Events ohne festes Datum
+            </li>
         </ul>
         <div class="events-grid">
             <!-- Standard -->
@@ -385,7 +403,8 @@
                     </div>
                 </div>
                 <div class="event-card-body">
-                    <p class="event-description">Farbe + <code class="code-hint">event-date-tba</code> für kleinere Schrift bei Datum-Spannen.</p>
+                    <p class="event-description">Farbe + <code class="code-hint">event-date-tba</code> für kleinere
+                        Schrift bei Datum-Spannen.</p>
                 </div>
                 <div class="event-card-footer">
                     <span class="event-location">
@@ -417,7 +436,8 @@
                     </div>
                 </div>
                 <div class="event-card-body">
-                    <p class="event-description">Mit <code class="code-hint">tba</code> und flexiblem Text wie "Letzter Freitag".</p>
+                    <p class="event-description">Mit <code class="code-hint">tba</code> und flexiblem Text wie "Letzter
+                        Freitag".</p>
                 </div>
                 <div class="event-card-footer">
                     <span class="event-location">
@@ -449,7 +469,8 @@
                     </div>
                 </div>
                 <div class="event-card-body">
-                    <p class="event-description">Grauer, gestrichelter Rahmen mit <code class="code-hint">class="event-date-box tba"</code>.</p>
+                    <p class="event-description">Grauer, gestrichelter Rahmen mit <code class="code-hint">class="event-date-box
+                        tba"</code>.</p>
                 </div>
                 <div class="event-card-footer">
                     <span class="event-location">
@@ -488,6 +509,7 @@
                                 <circle cx="12" cy="12" r="10"/>
                                 <path d="M12 6v6l4 2"/>
                             </svg>
+                            ⃗
                             20:00 Uhr
                         </p>
                     </div>
@@ -505,7 +527,8 @@
                     </span>
                     <a class="event-link" href="#">
                         Details
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                             stroke-linecap="round">
                             <path d="M5 12h14M12 5l7 7-7 7"/>
                         </svg>
                     </a>
@@ -531,7 +554,8 @@
                     </div>
                 </div>
                 <div class="event-card-body">
-                    <p class="event-description">Dezenter Hinweis mit <code class="code-hint">class="event-notice"</code>.</p>
+                    <p class="event-description">Dezenter Hinweis mit <code
+                            class="code-hint">class="event-notice"</code>.</p>
                 </div>
                 <div class="event-card-footer">
                     <span class="event-location">
@@ -621,7 +645,8 @@
                     <div class="meta-item">
                         <div class="meta-icon">
                             <svg viewBox="0 0 24 24">
-                                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" fill="white"/>
+                                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"
+                                      fill="white"/>
                                 <circle cx="12" cy="9" r="2.5" fill="#e84a8a"/>
                             </svg>
                         </div>
@@ -688,7 +713,8 @@
         <div class="demo-box">
             <div class="demo-row">
                 <a class="back-link" href="#">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                         stroke-linecap="round">
                         <path d="M19 12H5M12 19l-7-7 7-7"/>
                     </svg>
                     Back-Link (Zurück)
@@ -696,7 +722,8 @@
 
                 <a class="event-link" href="#">
                     Event-Link
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" width="16" height="16">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                         width="16" height="16">
                         <path d="M5 12h14M12 5l7 7-7 7"/>
                     </svg>
                 </a>
