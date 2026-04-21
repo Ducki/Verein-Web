@@ -687,6 +687,7 @@ a:hover {
 .event-meta {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
     gap: 1.5rem;
     margin-bottom: 1.5rem;
     padding-bottom: 1.5rem;
